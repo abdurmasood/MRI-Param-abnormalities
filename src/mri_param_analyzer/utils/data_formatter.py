@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from dbsetup import connect_to_database
+from ..core.database import connect_to_database
 from numpy import nan
 
 def listToArrayConversionDecimal(numpyArr, listIn):

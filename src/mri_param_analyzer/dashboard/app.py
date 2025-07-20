@@ -3,7 +3,7 @@ from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-from data_formatting import createDataFrameFromDB
+from ..utils.data_formatter import createDataFrameFromDB
 from datetime import datetime as dt
 import dash_table_experiments as dte
 import pandas as pd
@@ -370,5 +370,10 @@ def calculateLowerBound(param, df):
 
 	return lb
 
-if __name__ == '__main__':
+def main():
+	"""Main function to run the dashboard."""
 	app.run_server(debug=True)
+
+
+if __name__ == '__main__':
+	main()

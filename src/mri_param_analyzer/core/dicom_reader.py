@@ -1,12 +1,13 @@
 import pydicom as dicom
 import glob
 import re
-from dbsetup import connect_to_database, add_dicom_data_to_db
+from .database import connect_to_database, add_dicom_data_to_db
 
 DICOM_DATA_START_DIR = "Test_DICOM_Data"
 START_PATH = "/home/rafey/Programming/Python/projects/KURF/" + DICOM_DATA_START_DIR	#path where DICOM data is present
 
-if __name__ == '__main__':
+def main():
+	"""Main function for processing DICOM files."""
 				
 	#----------------------------------functions----------------------------------#
 
@@ -45,7 +46,8 @@ if __name__ == '__main__':
 	dbConnection.close()
 
 
-
+if __name__ == '__main__':
+	main()
 
 
 	#-------------------------------------testing----------------------------------#

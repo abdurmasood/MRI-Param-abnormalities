@@ -1,0 +1,10 @@
+[database]
+host = localhost
+port = 5432
+dbname = DICOM_Database
+user = postgres
+password = your_password_here
+
+[paths]
+dicom_data_dir = /path/to/your/dicom/data
+output_dir = /path/to/output 
